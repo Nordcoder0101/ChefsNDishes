@@ -1,0 +1,10 @@
+@using ChefsNDishes.Models;
+@model List<Chef>
+
+  @{
+    foreach(Chef c in @Model)
+    {
+      <option value="@c.ChefId">@c.FirstName @c.LastName</option>
+    }
+
+  }

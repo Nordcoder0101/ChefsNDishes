@@ -1,0 +1,25 @@
+@{
+  if(ViewBag.Url == "/")
+  {
+    <h1 class="Headers">Chefs | <a href="/dishes">Dishes</a></h1>
+    <a class="add" href="/new">Add a Chef</a>
+  }
+  else if (ViewBag.Url == "/dishes")
+  {
+    
+    <h1 class="Headers"><a href="/">Chefs</a> | Dishes</h1>
+    <a class="add" href="/dishes/new">Add a Dish</a>
+    
+  }
+  else if (ViewBag.Url == "/new")
+  {
+    <h1 class="HeaderBlock">Add a Chef!</h1>
+    <a href="/">Home</a>
+  }
+  else
+  {
+    
+    <h1 class="HeaderBlock">Add a Dish!</h1>
+    <a href="/dishes">Home</a>
+  }
+}

@@ -1,0 +1,16 @@
+@using ChefsNDishes.Models;
+@model List<Chef>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@Html.Partial("_Header")
+
+@{
+foreach (var chef in @Model)
+{
+<p>Chef Name: @chef.FirstName @chef.LastName</p>
+<p>Age: @chef.Age</p>
+<p># of dishes @chef.Dishes.Count()</p>
+}
+}

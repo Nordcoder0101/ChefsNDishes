@@ -1,0 +1,19 @@
+@using ChefsNDishes.Models;
+@model Chef
+
+<form asp-action="AddChef" asp-controller="Home" method="post">
+  <label asp-for="FirstName">First Name</label>
+  <input asp-for="FirstName">
+  <span asp-validation-for="FirstName"></span>
+
+  <label asp-for="LastName">Last Name</label>
+  <input asp-for="LastName">
+  <span asp-validation-for="LastName"></span>
+
+  <label asp-for="BirthDate">Date of Birth</label>
+  <input asp-for="BirthDate" type="date">
+  <span asp-for="BirthDate"></span>
+
+  <input type="submit" value="Add a chef" class="btn btn-primary">
+
+</form>

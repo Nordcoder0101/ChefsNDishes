@@ -1,0 +1,14 @@
+@using ChefsNDishes.Models;
+@model List<Dish>
+@Html.Partial("_Header")
+<h2 class ="yum">Yum, take a look at our tasty dishes!</h2>
+<hr>
+@{
+  foreach (var d in @Model)
+  {
+    <p>Dishname: @d.Name</p>
+    <p>Description: @d.Description</p>
+    <p>Calories: @d.Calories</p>
+    <p>Tastiness Rating: @d.Tastiness</p>
+  }
+}

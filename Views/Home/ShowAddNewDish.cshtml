@@ -1,0 +1,36 @@
+@using ChefsNDishes.Models;
+@model Dish
+@Html.Partial("_Header")
+<form asp-action="CreateDish" asp-controller="Home" method="POST"   >
+   
+    <label asp-for="Name">Name</label>
+    <input asp-for="Name">
+    <span asp-validation-for="Name"></span>
+    
+    <label asp-for="Calories">Calories</label>
+    <input asp-for="Calories">
+    <span asp-validation-for="Calories"></span>
+  
+    <label asp-for="ChefId">Chef</label>
+    <select asp-for="ChefId" name="FormChefId">
+      @Html.Partial("_DropDownOfChefs", (List<Chef>)ViewBag.AllChefs);
+    </select>
+    
+
+    
+    
+  
+    <label asp-for="Tastiness">Tastiness</label>
+    <select asp-for="Tastiness">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <label asp-for="Description">Description</label>
+    <textarea asp-for="Description"></textarea>
+    <span asp-validation-for="Description"></span>
+    <button  type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
